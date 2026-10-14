@@ -26,9 +26,16 @@ relation-specific modulo-6 Hebbian readout as one canonical model.
 - `hicasm.py` — complete model implementation and small public API.
 - `HICASM_demo.ipynb` — initialization, storage, partial-cue retrieval,
   unique-event addressing, ambiguity and disambiguation demonstrations.
+- `Tasks.ipynb` — five historical benchmark tasks using `hicasm.py`, including
+  overlap controls and input-feature masking; writes tables and figures to
+  `results/HIESM_v1_2_canonical/`. Run all cells in order from this directory.
 - `requirements.txt` — minimal runtime dependencies.
 
 ## Quick start
+
+Install the dependencies in your notebook's Python environment with
+`%pip install -r requirements.txt`, then restart the kernel before running
+either notebook. `Tasks.ipynb` also uses pandas for its result tables.
 
 ```python
 import numpy as np
@@ -54,6 +61,6 @@ The canonical realization uses `model_seed=321001` and
 `adaptation_seed=721001`. Default dimensions are
 `N_R=32, N_C=160, N_B=640, N_S=1024, H=6`.
 
-This repository contains only the usable frozen model and demonstration. Model
-development, rejected variants, historical notebooks and large benchmark
-artifacts remain outside this release.
+This repository contains the usable frozen model, demonstration, and standalone
+benchmark notebook. Model development, rejected variants, historical source
+notebooks and large benchmark artifacts remain outside this release.
